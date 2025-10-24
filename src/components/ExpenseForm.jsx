@@ -1,18 +1,8 @@
 import { useState } from 'react'
 
 export default function ExpenseForm({ onAdd, categories }) {
-  const [amount, setAmount] = useState('')
-  const [category, setCategory] = useState(categories[0])
-  const [date, setDate] = useState(() => new Date().toISOString().slice(0,10))
-  const [note, setNote] = useState('')
-
-  function submit(e) {
-    e.preventDefault()
-    const a = Number(amount)
-    if (!a || a <= 0) return alert('Enter amount greater than 0')
-    onAdd({ amount: a, category, date, note: note.trim() })
-    setAmount(''); setNote('')
-  }
+  
+  // KOD BURADA OLACAQ
 
   return (
     <form onSubmit={submit}>
