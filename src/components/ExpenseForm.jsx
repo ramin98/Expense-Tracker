@@ -4,14 +4,6 @@ export default function ExpenseForm({ onAdd }) {
   
   // KOD BURADA OLACAQ
 
-  function submit(e) {
-    e.preventDefault()
-    const a = Number(amount)
-    if (!a || a <= 0) return alert('Enter amount greater than 0')
-    onAdd({ amount: a, category, date, note: note.trim() })
-    setAmount(''); setNote('')
-  }
-
   return (
     <form>
       <div className="row">
