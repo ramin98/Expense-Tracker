@@ -9,7 +9,7 @@ export default function ExpenseList({ items, onRemove }) {
             {x.note && <div className="note">{x.note}</div>}
           </div>
           <div className="date">{new Date(x.date).toLocaleDateString()}</div>
-          <button className="ghost" onClick={()=>onRemove(x.id)} title="Delete">×</button>
+          <button className="ghost" title="Delete">×</button>
         </div>
       ))}
     </div>
