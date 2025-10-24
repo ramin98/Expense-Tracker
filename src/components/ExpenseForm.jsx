@@ -1,11 +1,19 @@
 import { useState } from 'react'
 
-export default function ExpenseForm({ onAdd, categories }) {
+export default function ExpenseForm({ onAdd }) {
   
   // KOD BURADA OLACAQ
 
+  function submit(e) {
+    e.preventDefault()
+    const a = Number(amount)
+    if (!a || a <= 0) return alert('Enter amount greater than 0')
+    onAdd({ amount: a, category, date, note: note.trim() })
+    setAmount(''); setNote('')
+  }
+
   return (
-    <form onSubmit={submit}>
+    <form>
       <div className="row">
         <input type="number" step="0.01" min="0.01" placeholder="Amount, ₼" value={amount} onChange={e=>setAmount(e.target.value)} />
         <select value={category} onChange={e=>setCategory(e.target.value)}>
