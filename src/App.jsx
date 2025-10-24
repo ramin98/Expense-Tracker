@@ -85,7 +85,7 @@ export default function App() {
           <h2>Expense list</h2>
           <p className="sub">Click “×” to delete. Records are stored in the browser.</p>
           <ExpenseList items={filtered} onRemove={removeExpense} />
-          {expenses.length > 0 && <div style={{marginTop:8}}><button className="ghost" onClick={clearAll}>Clear all</button></div>}
+          {expenses.length > 0 && <div style={{marginTop:8}}><button className="ghost">Clear all</button></div>}
         </div>
 
         <div className="card">
